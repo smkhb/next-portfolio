@@ -5,12 +5,10 @@ import {
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-  navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { MobileMenu } from "./MobileMenu";
-import { cn } from "@/lib/utils";
 
 export const navigationsItems = [
   {
@@ -18,12 +16,12 @@ export const navigationsItems = [
     href: "/",
   },
   {
-    title: "Gustbook",
-    href: "/guestbook",
+    title: "About",
+    href: "/about",
   },
   {
-    title: "Projects",
-    href: "/projects",
+    title: "Blog",
+    href: "/blog",
   },
 ];
 
@@ -34,8 +32,11 @@ export function Navbar() {
     <nav className="max-w-7xl mx-auto px-4 py-6 md:px-8 grid grid-cols-12">
       <div className="col-span-6 flex md:col-span-3">
         <Link href="/">
-          <h1 className="text-3xl font-semibold">
-            Samuel <span className="text-blue-500">Bernardo</span>
+          <h1 className="text-4xl font-semibold">
+            Samuel{" "}
+            <span className="hover:text-accent hover:bg-blue-500 rounded-md p-1 transition-colors">
+              Bernardo
+            </span>
           </h1>
         </Link>
       </div>
@@ -48,16 +49,9 @@ export function Navbar() {
                 <NavigationMenuLink
                   active={path === item.href}
                   asChild
-                  className={navigationMenuTriggerStyle()}
+                  className="text-xl"
                 >
-                  <Link
-                    href={item.href}
-                    className={cn(
-                      path === item.href ? "text-blue-500" : "text-gray-700"
-                    )}
-                  >
-                    {item.title}
-                  </Link>
+                  <Link href={item.href}>{item.title}</Link>
                 </NavigationMenuLink>
               </NavigationMenuItem>
             ))}
@@ -66,7 +60,9 @@ export function Navbar() {
       </div>
 
       <div className="flex items-center justify-end md:col-span-3 col-span-6">
-        <Button className="hidden md:block">Contact Me</Button>
+        <Button className="hidden md:flex" variant="blue" size="custom" asChild>
+          <a href="mailto:hello@samuelbernardo.dev">Contact me</a>
+        </Button>
         <div className="md:hidden">
           <MobileMenu />
         </div>
