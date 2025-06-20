@@ -1,5 +1,7 @@
+"use client";
 import Image from "next/image";
-import me from "../../public/me.jpg";
+import me from "../../public/me.png";
+import shaq from "../../public/shaq.gif";
 import {
   Card,
   CardDescription,
@@ -7,20 +9,36 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import BrazilText from "./BrazilText";
+import { motion } from "framer-motion";
+import clsx from "clsx";
 
 export function Hero() {
   return (
-    <div className="grid grid-cols-1 gap-4 lg:grid-cols-3">
-      <div className="col-span-1 h-full bg-gray-100 rounded-2xl min-h-[500px] lg:min-h-[300px] lg:col-span-2">
+    <div className="grid gap-4 grid-cols-1 lg:grid-cols-3">
+      <div className="col-span-1 h-full bg-gray-100 rounded-2xl pb-6 lg:min-h-[300px] lg:col-span-2 order-2 lg:order-1">
         <Card className="bg-gray-100 border-none shadow-none">
           <CardHeader>
             <CardTitle className="font-medium text-2xl md:text-3xl">
-              Hey I am Sam 💻
+              <span className="relative block group overflow-hidden">
+                <span
+                  className={clsx(
+                    "block transform transition-transform duration-500 group-hover:translate-y-full"
+                  )}
+                >
+                  Hey I am Sam 💻
+                </span>
+                <span
+                  className={clsx(
+                    "block absolute inset-0 transform translate-y-full transition-transform duration-500 group-hover:translate-y-0"
+                  )}
+                >
+                  Nice to meet you 👋
+                </span>
+              </span>
             </CardTitle>
-            
+
             <CardDescription className="text-gray-700 text-lg md:text-xl">
-              <BrazilText />
-              I work with building web applications using modern
+              <BrazilText />I work with building web applications using modern
               technologies like React, Next.js, and Node.js. I enjoy creating
               intuitive user interfaces and efficient backend systems.
             </CardDescription>
@@ -45,14 +63,32 @@ export function Hero() {
         </div>
       </div>
 
-      <Image
-        src={me}
-        alt="Samuel Bernardo"
-        className="col-span-1 rounded-2xl h-auto object-cover bg-gray-100"
-        width={500}
-        height={500}
-        priority
-      />
+      <div className="flip-container w-full flex justify-center  lg:justify-end order-1 lg:order-2">
+        <motion.div transition={{ type: "spring", stiffness: 100 }}>
+          <div className="flip-card">
+            <div className="flip-card-front">
+              <Image
+                alt="Profile Image"
+                src={me}
+                priority
+                className="w-full h-full object-cover rounded-full"
+                draggable={false}
+                style={{ userSelect: "none" }}
+              />
+            </div>
+            <div className="flip-card-back">
+              <Image
+                alt="Back Image"
+                src={shaq}
+                priority
+                className="w-full h-full object-cover rounded-full"
+                draggable={false}
+                style={{ userSelect: "none" }}
+              />
+            </div>
+          </div>
+        </motion.div>
+      </div>
     </div>
   );
 }

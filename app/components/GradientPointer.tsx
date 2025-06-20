@@ -18,14 +18,14 @@ export default function GradientPointer() {
   );
 
   return (
-    <div
-      style={{
-        position: "absolute",
-        inset: 0,
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "start",
-      }}
+    <div className="absolute inset-0 flex lg:justify-start"
+      // style={{
+      //   position: "absolute",
+      //   inset: 0,
+      //   display: "flex",
+      //   alignItems: "top",
+      //   justifyContent: "start",
+      // }}
       onPointerMove={(e) => {
         gradientX.set(e.clientX / width);
         gradientY.set(e.clientY / height);
@@ -35,8 +35,7 @@ export default function GradientPointer() {
         ref={ref}
         style={{
           background,
-          width: 500,
-          height: 400,
+          width: 400,
           borderRadius: "5%",
           cursor: "none",
         }}
