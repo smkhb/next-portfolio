@@ -113,7 +113,9 @@ export function SectionTwo() {
               <div>
                 <h1 className="text-xl font-medium">{social.name}</h1>
                 <Button size="sm" variant="blue" asChild>
-                  <a href={social.url}>Follow</a>
+                  <a href={social.url} target="_blank">
+                    Follow
+                  </a>
                 </Button>
               </div>
             </Card>
