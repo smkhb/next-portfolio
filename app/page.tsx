@@ -1,6 +1,7 @@
 import { AboutSection } from "./components/AboutSection";
 import { Hero } from "./components/Hero";
 import { SectionTwo } from "./components/SectionTwo";
+import { SubstackSignup } from "./components/SubstackSignUp";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <Hero />
       <SectionTwo />
       <AboutSection />
+      <SubstackSignup />
     </div>
   );
 }

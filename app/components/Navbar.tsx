@@ -8,20 +8,11 @@ import {
 } from "@/components/ui/navigation-menu";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { MobileMenu } from "./MobileMenu";
 
 export const navigationsItems = [
   {
-    title: "Home",
+    title: "",
     href: "/",
-  },
-  {
-    title: "About",
-    href: "/about",
-  },
-  {
-    title: "Blog",
-    href: "/blog",
   },
 ];
 
@@ -64,7 +55,6 @@ export function Navbar() {
           <a href="mailto:hello@samuelbernardo.dev">Contact me</a>
         </Button>
         <div className="md:hidden">
-          <MobileMenu />
         </div>
       </div>
     </nav>

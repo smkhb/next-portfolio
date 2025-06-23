@@ -99,7 +99,7 @@ export function SectionTwo() {
           </CardContent>
         </Card>
 
-        <div className="grid grid-cols-2 w-full gap-4">
+        {/* <div className="grid grid-cols-2 w-full gap-4">
           {socials.map((social) => (
             <Card
               key={social.id}
@@ -120,7 +120,7 @@ export function SectionTwo() {
               </div>
             </Card>
           ))}
-        </div>
+        </div> */}
       </div>
     </div>
   );

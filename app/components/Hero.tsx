@@ -71,7 +71,7 @@ export function Hero() {
                 alt="Profile Image"
                 src={me}
                 priority
-                className="w-full h-full object-cover rounded-full"
+                className="w-full h-full object-cover rounded-2xl"
                 draggable={false}
                 style={{ userSelect: "none" }}
               />
@@ -81,7 +81,7 @@ export function Hero() {
                 alt="Back Image"
                 src={shaq}
                 priority
-                className="w-full h-full object-cover rounded-full"
+                className="w-full h-full object-cover rounded-2xl"
                 draggable={false}
                 style={{ userSelect: "none" }}
               />

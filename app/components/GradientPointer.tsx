@@ -35,7 +35,7 @@ export default function GradientPointer() {
         ref={ref}
         style={{
           background,
-          width: 400,
+          width: 300,
           borderRadius: "5%",
           cursor: "none",
         }}
