@@ -1,3 +1,12 @@
+# Personal Portfolio
+
+Welcome to my personal portfolio built with [Next.js](https://nextjs.org)!  
+Here you will find an introduction to who I'm and my technical skills as a web developer. This portfolio is designed to share a bit about myself, and provide ways to get in touch.
+
+Feel free to explore and learn more about what I do!
+
+---
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
