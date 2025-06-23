@@ -1,4 +1,5 @@
 import { AboutSection } from "./components/AboutSection";
+import { Footer } from "./components/Footer";
 import { Hero } from "./components/Hero";
 import { SectionTwo } from "./components/SectionTwo";
 import { SubstackSignup } from "./components/SubstackSignUp";
@@ -10,6 +11,7 @@ export default function Home() {
       <SectionTwo />
       <AboutSection />
       <SubstackSignup />
+      <Footer />
     </div>
   );
 }
