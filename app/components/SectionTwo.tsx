@@ -25,8 +25,6 @@ import Vitest from "../../public/stack-icons/vitest.svg";
 import VSCode from "../../public/stack-icons/vscode.svg";
 import XD from "../../public/stack-icons/xd.svg";
 
-import linkedin from "../../public/socials/linkedin.svg";
-import github from "../../public/socials/github.svg";
 
 const stackIcons = [
   Docker,
@@ -49,26 +47,8 @@ const stackIcons = [
   XD,
 ];
 
-const socials = [
-  {
-    id: 1,
-    name: "LinkedIn",
-    icon: linkedin,
-    username: "@samuelbernardo",
-    url: "https://www.linkedin.com/in/samuelbernardo/",
-  },
-  {
-    id: 2,
-    name: "GitHub",
-    icon: github,
-    username: "@smkhb",
-    url: "https://www.github.com/smkhb",
-  },
-];
-
 import GradientPointer from "./GradientPointer";
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
 
 export function SectionTwo() {
   return (
